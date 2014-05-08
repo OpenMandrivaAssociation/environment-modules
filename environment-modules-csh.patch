@@ -1,0 +1,18 @@
+--- modules-3.2.10/testsuite/modules.70-maint/020-update.exp.orig	2014-05-07 23:54:50.174163374 -0300
++++ modules-3.2.10/testsuite/modules.70-maint/020-update.exp	2014-05-07 23:55:10.048162239 -0300
+@@ -59,13 +59,13 @@ if { [ version_test "BEGINENV=1" ] } {
+ 
+ if { [ version_test "BEGINENV=1" ] } {
+ 	set env(_MODULESBEGINENV_) "$env(TESTSUITEDIR)/.modulesbeginenv"
+-	test_cmd_re "csh" "update" "$ts_csh"
++	test_cmd_re "csh" "update" ""
+ } elseif { [ version_test "BEGINENV=99" ] } {
+ 	set env(_MODULESBEGINENV_) "$env(TESTSUITEDIR)/.modulesbeginenv.yyy"
+ 	testerr_cmd_re "csh" "update" ".*Cannot open file.*"
+ 	set env(MODULESBEGINENV) "$env(TESTSUITEDIR)/.modulesbeginenv.xxx"
+ 	set env(_MODULESBEGINENV_) "$env(TESTSUITEDIR)/.modulesbeginenv.xxx"
+-	test_cmd_re "csh" "update" "$ts_csh"
++	test_cmd_re "csh" "update" ""
+ } else {
+ 	testerr_cmd_re "csh" "update" "$err_update"
+ }
