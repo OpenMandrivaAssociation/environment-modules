@@ -1,6 +1,6 @@
 Name:           environment-modules
 Version:        3.2.10
-Release:        8%{?dist}
+Release:        9%{?dist}
 Summary:        Provides dynamic modification of a user's environment
 
 
@@ -32,6 +32,7 @@ BuildRequires:  dejagnu
 BuildRequires:  man
 #For ps in startup script
 Requires:       procps
+Requires:       tcl
 
 %description
 The Environment Modules package provides for the dynamic modification of
