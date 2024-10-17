@@ -5,7 +5,7 @@ Summary:        Provides dynamic modification of a user's environment
 
 
 License:        GPLv2+
-URL:            http://modules.sourceforge.net/
+URL:            https://modules.sourceforge.net/
 Source0:        http://downloads.sourceforge.net/modules/modules-%{version}.tar.bz2
 Source1:        modules.sh
 Source2:        createmodule.sh
